@@ -869,6 +869,11 @@ void __trace_hypercall(uint32_t event, unsigned long op,
     case __HYPERVISOR_sched_op:
         APPEND_ARG32(0); /* cmd */
         break;
+    case __HYPERVISOR_xen_version:
+        APPEND_ARG32(0); /* cmd */
+        APPEND_ARG32(1); /* buffer? */
+        APPEND_ARG32(3); /* Maybe 3rd arg */
+        break;
     }
 
     __trace_var(event, 1, sizeof(uint32_t) * (1 + (a - d.args)), &d);

@@ -44,7 +44,7 @@ const hypercall_args_t hypercall_args_table[NR_hypercalls] =
     COMP(update_va_mapping, 3, 4),
     COMP(set_timer_op, 1, 2),
     ARGS(event_channel_op_compat, 1),
-    ARGS(xen_version, 2),
+    ARGS(xen_version, 3),
     ARGS(console_io, 3),
     ARGS(physdev_op_compat, 1),
 #ifdef CONFIG_GRANT_TABLE
